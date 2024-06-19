@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+          <h2 class="heading-main">WEATHER APP</h2>
+            <div class="btns-tabs">
+                <button class="curr-weather">Your Weather</button>
+                <button class="search-weath-btn">Search Weather</button>
+            </div>
+            <div class="current-weather-tab" id="tab1">
+            <div class="display-data">
+                <div class="your-weather-head">goa <img src="" id="flag-img"></div>
+                <img src="../dob display/mountain.jpg" alt=""style= height:30px>
+                <p class="weather-descp">clear</p>
+                <div class="temp-display"> </div>
+            </div>
+            <div class="parameters">
+                <div class="wind">
+                    <div class="wind-icon icon"><span class="material-symbols-outlined hawa">air</span></div>
+                    <p class="windspeed">WINDSPEED</p>
+                    <div class="speed">22kmph</div>
+                </div>
+                <div class="humid">
+                    <div class="humid-icon icon"><span class="material-symbols-outlined chipchip">humidity_percentage</span></div>
+                    <p class="humidity">HUMIDITY</p>
+                    <div class="humid-percent">22%</div>
+                </div>
+                <div class="badal">
+                    <div class="badal-icon icon"><span class="material-symbols-outlined badals">cloud</span></div>
+                    <p class="cloud">CLOUDS</p>
+                    <div class="cloudy-percent"></div>
+                </div>
+            </div>
+        </div>
+ <!-- one tab ends -->
+
+             <div class="search-weather-tab" id="tab2">
+                <div class="take-input">
+                    <input type="text" name="" id="search-city">
+                <span class="material-symbols-outlined search-btn">search</span>
+                </div>
+                <div class="serch-weather-container">
+                    <div class="display-data">
+                        <div class="your-weather-head">goa <img src="https://flagsapi.com/IN/flat/32.png"></div>
+                        <img src="../dob display/mountain.jpg" alt=""style= height:30px>
+                        <p class="weather-descp">clear</p>
+                        <div class="temp-display">22.4 <span>&#176;</span></div>
+                    </div>
+                <div class="parameters">
+                    <div class="wind">
+                        <div class="wind-icon icon"><span class="material-symbols-outlined hawa">air</span></div>
+                        <p class="windspeed">WINDSPEED</p>
+                        <div class="speed">22kmph</div>
+                    </div>
+                    <div class="humid">
+                        <div class="humid-icon icon"><span class="material-symbols-outlined chipchip">humidity_percentage</span></div>
+                        <p class="humidity">HUMIDITY</p>
+                        <div class="humid-percent">22%</div>
+                    </div>
+                    <div class="badal">
+                        <div class="badal-icon icon"><span class="material-symbols-outlined badals">cloud</span></div>
+                        <p class="cloud">CLOUDS</p>
+                        <div class="cloudy-percent">34%</div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

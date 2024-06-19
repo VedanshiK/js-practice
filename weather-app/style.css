@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    color:aliceblue;
+}
+.wrapper{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    background-color: rgb(24, 63, 135);
+    padding:2rem;
+}
+.container{
+    /* background-color: rgb(255, 204, 0); */
+    width:30%;
+    max-height:100%;
+    margin:0 auto;
+}
+h2{
+    text-align: center;
+}
+.btns-tabs{
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-between;
+    gap:2rem;
+}
+.btns-tabs button{
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    padding:0.4rem;
+}
+.btns-tabs button:hover{
+    background-color: aliceblue;
+    color:black;
+    border-radius: 0.5rem;
+   
+}
+.display-data{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.4rem;
+}
+.your-weather-head{
+    font-size: 2rem;
+    display: flex;
+    justify-content: baseline;
+}
+.your-weather-head img{
+    padding:0.4rem;
+}
+.temp-display{
+    font-size: 2rem;
+}
+.temp-display span{
+    margin-left: -0.5rem;
+}
+.weather-descp{
+    font-size: 1.2rem;
+}
+.parameters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2rem;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.parameters div{
+    padding: 0.3rem 1rem;
+    text-align: center;
+    width:100%;
+}
+.hawa{
+    color:blue;
+}
+.chipchip{
+    color:rgb(154, 209, 71);
+}
+.badals{
+    color:blue
+}
+.wind,.badal,.humid{
+    background-color: rgba(255, 255, 255, 0.5);   
+}
+.take-input{
+    padding-top: 1rem;
+    display: flex;
+}
+input{
+    width:90%;
+    color:black;
+    outline:none;
+    border:2px solid black;
+    box-shadow: 1px 1px 90px;
+}
+.search-btn{
+    cursor: pointer;
+}
+.hide-tab{
+    display:none;
+}

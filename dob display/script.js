@@ -1,9 +1,8 @@
 let toggle=false;
 const settingContent=document.getElementById("settingContent");
 const settingIcon=document.getElementById("settingIcon");
-let dateOfBirth;
+let dateOfBirth=null;
 const settingCogEl = document.getElementById("settingIcon");
-const settingContentEl = document.getElementById("settingContent");
 const initialTextEl = document.getElementById("initialText");
 const afterDOBBtnTxtEl = document.getElementById("afterDOBBtnTxt");
 const dobButtonEl = document.getElementById("dobButton");
@@ -29,9 +28,23 @@ console.log("toggle");
 function makeTwoDigitNumber (number){
   return number > 9 ? number : `0${number}`;
 }
+function resetDisplay() {
+  // Set all display elements to zero
+  document.getElementById("yearDisplay").textContent = "0";
+  document.getElementById("monthDisplay").textContent = "0";
+  document.getElementById("dayDisplay").textContent = "0";
+  document.getElementById("hourDisplay").textContent = "0";
+  document.getElementById("minuteDisplay").textContent = "0";
+  document.getElementById("secondDisplay").textContent = "0";
+}
 const updateAge =()=> {
   const currentDate = new Date();
   const dateDiff = currentDate - dateOfBirth;
+  console.log(dateDiff);
+  if (!dateDiff) {
+    resetDisplay();
+    return;
+  }
   const year = Math.floor(dateDiff / (1000 * 60 * 60 * 24 * 365));
   const month = Math.floor((dateDiff / (1000 * 60 * 60 * 24 * 365)) % 12);
   const day = Math.floor(dateDiff / (1000 * 60 * 60 * 24)) % 30;
@@ -47,13 +60,14 @@ const updateAge =()=> {
   secondEl.innerHTML = makeTwoDigitNumber(second);
 }
 function localStorageGetter () {
+  localStorage.clear();
   const year = localStorage.getItem("year");
   const month = localStorage.getItem("month");
   const date = localStorage.getItem("date");
   if (year && month && date) {
     dateOfBirth = new Date(year, month, date);
+    updateAge();
   }
-  updateAge();
 }
 function contentToggler  () {
   updateAge();

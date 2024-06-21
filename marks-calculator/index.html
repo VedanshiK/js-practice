@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form onsubmit="calculateMarks(event)" class="form-container" id="form-container">
+                <p class="head">Marks Calculator</p>
+                <div class="subject-container">
+                    <input type="number" min="0" max="100" name="maths" id="maths" placeholder="Maths" required>
+                    <input type="number" min="0" max="100" name="science" id="science"  placeholder="Science" required>
+                    <input type="number" min="0" max="100" name="english" id="english"  placeholder="English" required>
+                    <input type="number" min="0" max="100" name="sst" id="sst"  placeholder="SSt." required>
+                </div>
+                <button class="btn" id="buton" type="submit">Calculate</button>
+                <div class="display" id="display"></div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
